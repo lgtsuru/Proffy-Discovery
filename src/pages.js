@@ -36,12 +36,15 @@ async function pageStudy(req,res){
         const db = await Database
         const proffys = await db.all(query)
 
+        proffys.map((proffy) => {
+            proffys.subject = getSubject(proffy.subject) 
+        })
+
         return res.render('study.html', {proffys, subjects, filters, weekdays})
         
     } catch (error) {
         console.log(error)
     }
-
     
 }
 
@@ -74,7 +77,6 @@ async function saveClasses(req,res){
             time_to: convertHoursToMinutes(req.body.time_to[index])
         }
     })
-    console.log(classScheduleValues)
 
     try {
         const db = await Database

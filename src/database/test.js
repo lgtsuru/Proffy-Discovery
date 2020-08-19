@@ -1,6 +1,6 @@
 //Importando a database do db.js
 //./ indica a pasta local, neste caso src/database
-const Database = require('./db.js')
+const Database = require('./db')
 const createProffy = require('./createProffy')
 //chamando a db que está lá no db.js e adicionando um novo then, que usa uma funcao curta ()=>
 Database.then(async(db)=>{
@@ -28,7 +28,7 @@ Database.then(async(db)=>{
         {
             weekday: 0,
             time_from: 520,
-            time_to: 1220,
+            time_to: 1200,
         }
     ]
 
@@ -58,10 +58,9 @@ Database.then(async(db)=>{
         FROM class_schedule
         WHERE class_schedule.class_id = "1"
         AND class_schedule.weekday = "0"
-        AND class_schedule.time_from <= "1300"
-        AND class_schedule.time_to > "1300";
-    `)
- 
-    //console.log(selectClassesSchedules)
+        AND class_schedule.time_from <= "1000"
+        AND class_schedule.time_to > "1000";
 
+    `)
+    //console.log(selectClassesSchedules)
 })

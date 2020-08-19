@@ -13,7 +13,6 @@ const subjects = [
 ]
 
 const weekdays = [
-    "Selecione uma opção",
     "Domingo",
     "Segunda-feira",
     "Terça-feira",
