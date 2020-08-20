@@ -95,8 +95,8 @@
         font-size: 40%; /*modificar as meidas rem*/
     }
 
-    .logo-container img{
-        height: 10rem;
+    .hero-image {
+        height: 45rem;
     }
 }
 
