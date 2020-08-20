@@ -37,7 +37,7 @@ async function pageStudy(req,res){
         const proffys = await db.all(query)
 
         proffys.map((proffy) => {
-            proffys.subject = getSubject(proffy.subject) 
+            proffy.subject = getSubject(proffy.subject) 
         })
 
         return res.render('study.html', {proffys, subjects, filters, weekdays})
